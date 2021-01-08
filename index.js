@@ -18,15 +18,22 @@ function AddBook(e) {
         Type = Psycology.value
     }
 
-    let Clear = `<button type="button" id="Delet">Delet</button>`;
-   
-  
- 
+    let Clear = `<button type="button" class="btn btn-danger" onclick="myFunction()">Delet</button>`
+    
+    // `<button type="button" id="Delet" onclick="myFunction()">Delet</button>`
+
+
     let book = new Book(Name, Author, Type, Clear);
+
+
+
     let display = new Display();
     display.add(book);
-    display.clear()
+    display.clear();
 
 
     e.preventDefault();
+}
+function myFunction() {
+ document.getElementById("TableRow").remove();
 }
